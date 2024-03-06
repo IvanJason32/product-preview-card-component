@@ -187,6 +187,9 @@ body {
     .sec2-t2 {
         width: 295px;
         font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
     }
     .sec2-btn{
         width: 295px;
