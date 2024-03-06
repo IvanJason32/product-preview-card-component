@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cream: #F2EAE2;
+    --aurometal-Saurus: #6C7289;
+    --Deep-Aquamarine: #3D8168;
+    --deep-aquamarine-hover: #1A4032;
+    --Gunmetal: #1C232B;
+    --White: #FFFFFF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 600px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    border-radius: 10px;
+    background-color: var(--White);
+}
+.image-product-desktop{
+    width: 300px;
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.image-product-mobile {
+    display: none;
+}
+
+.section-2{
+    display: grid;
+    grid-template-columns: 32px 1fr 32px;
+    grid-template-rows: 32px 15px 20px 96px 24px 92px 29px 32px 30px 48px 32px;
+    grid-template-areas: 
+    "sec2-t1"
+    "sec2-t2"
+    "sec2-content"
+    "sec2-price"
+    "sec2-btn";
+}
+
+.sec2-t1 {
+    grid-area: sec2-t1;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: var(--aurometal-Saurus);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Overline */
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5px;
+}
+.sec2-t2 {
+    grid-area: sec2-t2;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    color: var(--Gunmetal, #1C232B);
+    font-feature-settings: 'clig' off, 'liga' off;
+    width: 236px;
+    /* Display */
+    font-family: Fraunces;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px; /* 100% */
+}
+.sec2-content{
+    grid-area: sec2-content;
+    grid-column: 2/3;
+    grid-row: 6/7;
+    color: var(--aurometal-Saurus, #6C7289);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Body */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px; /* 164.286% */
+}
+.sec2-price{
+    grid-area: sec2-price;
+    grid-column: 2/3;
+    grid-row: 8/9;
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    align-items: center;
+}
+.price1{
+    color: var(--Deep-Aquamarine, #3D8168);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Fraunces;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+}
+.price2{
+    color: var(--aurometal-Saurus, #6C7289);
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px; /* 176.923% */
+    text-decoration-line:line-through ;
+}
+.sec2-btn{
+    grid-area: sec2-btn;
+    grid-column: 2/3;
+    grid-row: 10/11;
+    width: 236px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--Deep-Aquamarine);
+    display: flex;
+    flex-direction: row;
+    gap: 11.61px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.sec2-btn:active{
+    background-color: var(--deep-aquamarine-hover);
+}
+.icon-car{
+    width: 14.385px;
+    height: 16px;
+}
+.btn-txt{
+    color: var(--White, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Button Text */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media (max-width: 420px) {
+    .container{
+        width: 343px;
+        height: 611px;
+        grid-template-columns: 343px;
+        grid-row: 240px 371px;
+    }
+    .image-product-desktop {
+        display: none;
+    }
+    .image-product-mobile {
+        display:block;
+        width: 343.697px;
+        height: 240px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .section-2{
+        display: grid;
+        grid-template-columns: 24px 1fr 24px;
+        grid-template-rows: 24px 15px 12px 64px 16px 92px 24px 32px 20px 48px 24px;
+        grid-template-areas: 
+        "sec2-t1"
+        "sec2-t2"
+        "sec2-content"
+        "sec2-price"
+        "sec2-btn";
+    }
+
+    .sec2-t2 {
+        width: 295px;
+        font-size: 37px;
+    }
+    .sec2-btn{
+        width: 295px;
+        height: 48px;
+    }
+    .icon-car{
+        width: 14.385px;
+        height: 16px;
+    }
+}
